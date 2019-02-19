@@ -1,0 +1,48 @@
+<!DOCTYPE Shape>
+<Shape>
+    <Grammar>
+        R - SAE
+        S - n(N1)
+        A - n(N2) c(S,C1)
+        E - [MM] (G2)
+        M - n(N3) c(S,C2)
+    </Grammar>
+
+    <Parameters>
+    
+        <N1 type="node">
+            <Size rand_mode="single" xfrom="1.3" xto="1.3" yfrom="0.4" yto="0.4" zfrom="0.5" zto="0.5"/>
+            <Translation rand_mode="single" xfrom="-0.0" xto="0.0" yfrom="0.75" yto="0.75" zfrom="-0.0" zto="0.0"/>
+            <Constrain value = "0"/>
+        </N1>
+        
+        <N2 type="node">
+            <Size rand_mode="single" xfrom="0.5" xto="5.5" yfrom="0.2" yto="0.2" zfrom="0.5" zto="0.5"/>
+            <Constrain value = "0"/>
+        </N2>  
+        
+        <N3 type="node">
+            <Size rand_mode="single" xfrom="0.05" xto="0.05" yfrom="0.3" yto="0.3" zfrom="0.05" zto="0.05"/>
+            <Constrain value = "0"/>
+        </N3>
+
+        <C1 type="connector">
+            <Location rand_mode="none" type="top"/>
+            <Size     rand_mode="single" xfrom="1.0" xto="1.0" yfrom="0.2" yto="0.2"/>
+            <Position rand_mode="none" x="center" y="back"/>
+        </C1>  
+        
+        <C2 type="connector">
+            <Location rand_mode="none" type="top"/>
+            <Size     rand_mode="none" xfrom="0.1" xto="0.1" yfrom="0.3" yto="0.3"/>
+            <Position rand_mode="single" x="none" y="none"/>
+        </C2>        
+        
+        <G2 type="group">
+            <Offset    rand_mode="none" xfrom="0.0" xto="0.0" yfrom="0.0" yto="0.0"/> 
+            <Position1 rand_mode="group" x="left" y="center"/>
+            <Position2 rand_mode="group" x="right" y="center"/>
+        </G2>  
+    </Parameters>      
+</Shape>
+ 

@@ -1,0 +1,28 @@
+Welcome, this is the C++ code corresponding to "Parsing Geometry Using Structure Aware Shape Templates".
+
+This is a tough pipeline and therefore, multiple parts of the code are maintained here, therefore making it one large clutter.
+
+Under these conditions, this code is expected to run successfully: MS Visual Studio Express 2013, glew-1.12.0, freeglut-3.0, flann-1.7.1
+
+First start by running build.bat after editing main.pro. Make edits to main.pro to reflect onto the corresponding paths, and this can be made to work.
+
+The required templates are present in Data/Grammars.
+
+To run the optimization, one would need to capture the point cloud from the mesh by pressing "X" on the keyboard. Multiple view point capture can be obtained 
+by pressing "X" and moving the mouse around with a long press. Pressing "O" and running it on mode "0" will start the optimization with a decent initialization.
+
+Any change to code can be effected on Scene.cpp (for the core/changing or manipulating shapes), Grammar.cpp (for the templates, changing/manipulating them), cmaes.h (for the CMA-ES optimization) and GLWidget.cpp/GUI.cpp (for the key-press operations). 
+
+Any use of this code in any publication, patent or for any other research purposes, requires citing of the following paper:
+Ganapathi-Subramanian, V., Diamanti, O., Pirk, S., Tang, C., Niessner, M. and Guibas, L., 2018, September. Parsing geometry using structure-aware shape templates. In 2018 International Conference on 3D Vision (3DV) (pp. 672-681). IEEE.
+
+The BibTeX for the same is as follows: 
+
+@inproceedings{ganapathi2018parsing,
+  title={Parsing geometry using structure-aware shape templates},
+  author={Ganapathi-Subramanian, Vignesh and Diamanti, Olga and Pirk, Soeren and Tang, Chengcheng and Niessner, Matthias and Guibas, Leonidas},
+  booktitle={2018 International Conference on 3D Vision (3DV)},
+  pages={672--681},
+  year={2018},
+  organization={IEEE}
+}

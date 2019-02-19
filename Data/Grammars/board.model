@@ -1,0 +1,112 @@
+<!DOCTYPE Shape>
+<Shape>
+
+    <!-- BOARD 1 -->
+    <Part name="leftParent" constrainSize="false"> 
+        <Translation x="-1.0" y="1.0" z="0.0"/>
+        <Size x="0.1" y="2.0" z="1.0"/>
+    </Part>
+
+    <Part name="rightParent" constrainSize="false">
+        <Translation x="1.0" y="1.0" z="0.0"/>
+        <Size x="0.1" y="2.0" z="1.0"/>
+    </Part>
+
+    <Part name="board1" constrainSize="true">
+        <Size x="1.0" y="1.0" z="0.2"/>
+    </Part>
+
+
+    <Connector type="left" from="rightParent" to="board1">
+        <Size x="1.0" y="0.1"/>
+        <Offset x="1.0" y="0.5"/>
+    </Connector>
+
+    <Connector type="right" from="leftParent" to="board1">
+        <Size x="1.0" y="0.1"/>
+        <Offset x="1.0" y="0.5"/>
+    </Connector> 
+
+
+    <!-- BOARD 2 -->
+    <Part name="topParent" constrainSize="false"> 
+        <Translation x="-4.0" y="2.0" z="0.0"/>
+        <Size x="2.0" y="0.1" z="1.0"/>
+    </Part>
+
+    <Part name="bottomParent" constrainSize="false">
+        <Translation x="-4.0" y="0.0" z="0.0"/>
+        <Size x="2.0" y="0.1" z="1.0"/>
+    </Part>
+
+    <Part name="board2" constrainSize="true">
+        <Size x="1.0" y="1.0" z="1.0"/>
+    </Part>
+
+    <Part name="board3" constrainSize="true">
+        <Size x="1.0" y="1.0" z="1.0"/>
+    </Part> 
+
+
+    <Connector type="top" from="bottomParent" to="board2">
+        <Size x="0.1" y="1.0"/>
+        <Offset x="1.0" y="0.5"/>
+    </Connector>
+
+    <Connector type="bottom" from="topParent" to="board2">
+        <Size x="0.1" y="1.0"/>
+        <Offset x="1.0" y="0.5"/>
+    </Connector> 
+    
+    <Connector type="bottom" from="topParent" to="board3">
+        <Size x="0.1" y="1.0"/>
+        <Offset x="0.0" y="0.5"/>
+    </Connector>
+
+    <Connector type="top" from="bottomParent" to="board3">
+        <Size x="0.1" y="1.0"/>
+        <Offset x="0.0" y="0.5"/>
+    </Connector>     
+    
+    
+    <!-- BOARD 3 -->
+    <Part name = "frontParent" constrainSize="false"> 
+        <Translation x="4.0" y="1.0" z="1.0"/>
+        <Size x="1.0" y="2.0" z="0.1"/>
+    </Part>
+    
+    <Part name = "backParent" constrainSize="false">
+        <Translation x="4.0" y="1.0" z="-1.0"/>
+        <Size x="1.0" y="2.0" z="0.1"/>
+    </Part>
+    
+    <Part name="board4" constrainSize="true">
+        <Size x="1.0" y="1.0" z="1.0"/>
+    </Part>
+    
+    <Part name="board5" constrainSize="true">
+        <Size x="1.0" y="1.0" z="1.0"/>
+    </Part>    
+
+    <Connector type="back" from="frontParent" to="board4">
+        <Size x="0.8" y="0.1"/>
+        <Offset x="0.5" y="0.8"/>
+    </Connector>
+    
+    <Connector type="front" from="backParent" to="board4">
+        <Size x="0.8" y="0.1"/>
+        <Offset x="0.5" y="0.8"/>
+    </Connector>    
+    
+    <Connector type="front" from="backParent" to="board5">
+        <Size x="0.8" y="0.1"/>
+        <Offset x="0.5" y="0.2"/>
+    </Connector>
+    
+    <Connector type="back" from="frontParent" to="board5">
+        <Size x="0.8" y="0.1"/>
+        <Offset x="0.5" y="0.2"/>
+    </Connector>        
+
+</Shape>
+ 

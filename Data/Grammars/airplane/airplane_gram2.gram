@@ -1,0 +1,70 @@
+<!DOCTYPE Shape>
+<Shape>
+    <Grammar>
+        R - SB
+        B - MKJPL
+        S - n(N1)
+        M - n(N2) c(S,C1)
+        K - n(N2) c(S,C2)
+        J - n(N2) c(S,C4)
+        P - n(N2) c(S,C5)
+        L - n(N3) c(S,C3)
+    </Grammar>
+
+    <Parameters>
+    
+        <N1 type="node">
+            <Size rand_mode="single" xfrom="0.25" xto="0.25" yfrom="0.35" yto="0.35" zfrom="0.7" zto="0.7"/>
+            <Translation rand_mode="single" xfrom="0.0" xto="0.0" yfrom="0.35" yto="0.35" zfrom="-0.0" zto="0.0"/>
+            <Constrain value = "0"/>
+        </N1>
+        
+        <N2 type="node">
+            <Size rand_mode="single" xfrom="0.3" xto="0.3" yfrom="0.05" yto="0.05" zfrom="0.1" zto="0.1"/>
+            <Constrain value = "0"/>
+        </N2>  
+
+        <N3 type="node">
+            <Size rand_mode="single" xfrom="0.3" xto="0.3" yfrom="0.1" yto="0.1" zfrom="0.1" zto="0.1"/>
+            <Constrain value = "0"/>
+        </N3>  
+        
+		<C1 type="connector">
+            <Location rand_mode="none" type="left"/>
+            <Size     rand_mode="single" xfrom="0.1" xto="0.1" yfrom="0.05" yto="0.05"/>
+            <Position rand_mode="none" x="right" y="back"/>
+        </C1>  
+        
+        <C2 type="connector">
+            <Location rand_mode="none" type="right"/>
+            <Size     rand_mode="single" xfrom="0.1" xto="0.1" yfrom="0.05" yto="0.05"/>
+            <Position rand_mode="none" x="front" y="back"/>
+        </C2>
+
+        <C3 type="connector">
+            <Location rand_mode="none" type="bottom"/>
+            <Size     rand_mode="single" xfrom="0.1" xto="0.1" yfrom="0.3" yto="0.3"/>
+            <Position rand_mode="none" x="center" y="front"/>
+        </C3>  
+
+        <C4 type="connector">
+            <Location rand_mode="none" type="left"/>
+            <Size     rand_mode="single" xfrom="0.1" xto="0.1" yfrom="0.05" yto="0.05"/>
+            <Position rand_mode="none" x="right" y="front"/>
+        </C4>  
+        
+        <C5 type="connector">
+            <Location rand_mode="none" type="right"/>
+            <Size     rand_mode="single" xfrom="0.1" xto="0.1" yfrom="0.05" yto="0.05"/>
+            <Position rand_mode="none" x="front" y="front"/>
+        </C5>        
+        
+        <G1 type="group">
+            <Offset    rand_mode="none" xfrom="0.0" xto="0.0" yfrom="0.0" yto="0.0"/> 
+            <Position1 rand_mode="group" x="left" y="center"/>
+            <Position2 rand_mode="group" x="right" y="center"/>
+        </G1>
+    </Parameters>  
+    
+</Shape>
+ 

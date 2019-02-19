@@ -1,0 +1,41 @@
+<!DOCTYPE Shape>
+<Shape>
+    <Grammar>
+        R - SBP
+        S - n(N1)
+        B - n(N2) c(S,C1)
+        P - n(N3) c(B,C2)
+    </Grammar>
+
+    <Parameters>
+        <N1 type="node">
+            <Size rand_mode="single" xfrom="0.7" xto="0.7" yfrom="0.5" yto="0.5" zfrom="0.05" zto="0.05"/>
+            <Translation rand_mode="single" xfrom="0.0" xto="0.0" yfrom="0.7" yto="0.7" zfrom="-0.0" zto="0.0"/>
+            <Constrain value = "0"/>
+        </N1>
+        
+        <N2 type="node">
+            <Size rand_mode="single" xfrom="0.5" xto="5.5" yfrom="0.6" yto="0.6" zfrom="0.05" zto="0.05"/>
+            <Constrain value = "1"/>
+        </N2> 
+        
+        <N3 type="node">
+            <Size rand_mode="single" xfrom="0.4" xto="0.4" yfrom="0.05" yto="0.05" zfrom="0.4" zto="0.4"/>
+            <Constrain value = "3"/>
+        </N3> 
+        
+        <C1 type="connector">
+            <Location rand_mode="none" type="back"/>
+            <Size     rand_mode="single" xfrom="0.1" xto="0.1" yfrom="0.1" yto="0.1"/>
+            <Position rand_mode="none" x="center" y="front"/>
+        </C1>
+
+        <C2 type="connector">
+            <Location rand_mode="none" type="bottom"/>
+            <Size     rand_mode="single" xfrom="0.4" xto="0.4" yfrom="0.4" yto="0.4"/>
+            <Position rand_mode="none" x="center" y="center"/>
+        </C2>  
+    </Parameters>  
+    
+</Shape>
+ 

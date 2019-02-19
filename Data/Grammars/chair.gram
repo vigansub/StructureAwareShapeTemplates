@@ -1,0 +1,123 @@
+<!DOCTYPE Shape>
+<Shape>
+    <Grammar>
+        R - S B L A
+        S - n(N1)
+        B - n(N2) c(S,C1)
+        L - PH | [QQ](G2) | [PPPP](G3)
+        H - n(N6) c(P,C2)
+        P - n(N3) c(S,C2) 
+        Q - n(N3) c(S,C2) n(N5) c(Q,C2)
+        A - [JJ](G5) | [TT](G4) | 0
+        T - n(N4) c(S,C4) n(N5) c(T,C4)
+        J - n(N4) c(B,C3)
+    </Grammar>
+
+    <Parameters>
+    
+        <N1 type="node">
+            <Size mode="consistent" xfrom="0.5" xto="1.0" yfrom="0.01" yto="0.2" zfrom="0.5" zto="1.0"/>
+            <Constrain value = "0"/>
+        </N1>
+        
+        <N2 type="node">
+            <Size mode="consistent" xfrom="1.0" xto="1.0" yfrom="0.2" yto="1.0" zfrom="1.0" zto="1.0"/>
+            <Constrain value = "0"/>
+        </N2>   
+
+        <N3 type="node">
+            <Size mode="consistent" xfrom="1.0" xto="1.0" yfrom="0.2" yto="1.0" zfrom="1.0" zto="1.0"/>
+            <Constrain value = "0"/>
+        </N3>    
+        
+        <N4 type="node">
+            <Size mode="consistent" xfrom="0.2" xto="0.8" yfrom="0.2" yto="0.5" zfrom="0.2" zto="0.5"/>
+            <Constrain value = "0"/>
+        </N4>           
+        
+        <N5 type="node">
+            <Size mode="consistent" xfrom="0.2" xto="0.8" yfrom="0.01" yto="0.1" zfrom="0.2" zto="0.8"/>
+            <Constrain value = "1"/>
+        </N5>  
+
+        <N6 type="node">
+            <Size mode="consistent" xfrom="0.2" xto="0.8" yfrom="0.01" yto="0.1" zfrom="0.2" zto="0.8"/>
+            <Constrain value = "1"/>
+        </N6>  
+        
+        <N7 type="node">
+            <Size mode="consistent" xfrom="0.01" xto="0.1" yfrom="0.1" yto="0.5" zfrom="0.01" zto="0.1"/>
+            <Constrain value = "1"/>
+        </N7>          
+
+        
+        
+        
+        <C1 type="connector">
+            <Location mode="none" type="top"/>
+            <Size     mode="consistent" xfrom="0.5" xto="1.0" yfrom="0.1" yto="0.11"/>
+            <Offset   mode="consistent" xfrom="0.0" xto="1.0" yfrom="0.8" yto="1.0"/>            
+            <Position mode="none" x="centered" y="back"/>
+        </C1>  
+
+        <C2 type="connector">
+            <Location mode="none" type="bottom"/>
+            <Size     mode="consistent" xfrom="0.05" xto="0.2" yfrom="0.05" yto="0.2"/>
+            <Offset   mode="consistent" xfrom="0.0" xto="1.0" yfrom="0.0" yto="1.0"/>            
+            <Position mode="none" x="center" y="center"/>
+        </C2>  
+        
+        <C3 type="connector">            
+            <Location mode = "none" type="front"/>
+            <Size     mode="consistent" xfrom="0.01" xto="0.1" yfrom="0.01" yto="0.1"/>            
+            <Offset   mode="consistent" xfrom="0.0" xto="1.0" yfrom="0.0" yto="1.0"/>
+            <Position mode="none" x="center" y="center"/>
+        </C3>  
+        
+        <C4 type="connector">            
+            <Location mode = "none" type="top"/>
+            <Size     mode="consistent" xfrom="0.01" xto="0.1" yfrom="0.01" yto="0.1"/>            
+            <Offset   mode="consistent" xfrom="0.0" xto="1.0" yfrom="0.0" yto="1.0"/>
+            <Position mode="none" x="center" y="center"/>
+        </C4>  
+
+        <C5 type="connector">            
+            <Location mode = "none" type="front"/>
+            <Size     mode="consistent" xfrom="0.0" xto="0.1" yfrom="0.0" yto="0.5"/>            
+            <Offset   mode="consistent" xfrom="0.0" xto="1.0" yfrom="0.0" yto="1.0"/>
+            <Position mode="none" x="left" y="front"/>
+        </C5>  
+       
+       
+       
+       
+        <G1 type="group">            
+            <Position1 mode="none" x="center" y="center"/>
+        </G1>   
+
+        <G2 type="group">
+            <Position1 mode="none" x="left" y="center"/>
+            <Position2 mode="none" x="right" y="center"/>
+        </G2>   
+
+        <G3 type="group">
+            <Position1 mode="none" x="left" y="front"/>
+            <Position2 mode="none" x="right" y="front"/>
+            <Position3 mode="none" x="left" y="back"/>
+            <Position4 mode="none" x="right" y="back"/>
+        </G3>  
+        
+        <G4 type="group">
+            <Position1 mode="none" x="left" y="center"/>
+            <Position2 mode="none" x="right" y="center"/>
+        </G4>   
+
+        <G5 type="group">
+            <Position1 mode="none" x="left" y="center"/>
+            <Position2 mode="none" x="right" y="center"/>
+        </G5>   
+        
+    </Parameters>  
+    
+</Shape>
+ 

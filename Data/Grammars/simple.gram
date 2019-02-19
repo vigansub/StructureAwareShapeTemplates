@@ -1,0 +1,50 @@
+<!DOCTYPE Shape>
+<Shape>
+    <Grammar>
+        R - S B
+        S - n(N1)
+        B - A | D | E {0.1, 0.2, 0.7}
+        A - n(N2) c(S,C1)
+        D - n(N2) c(S,C2)
+        E - n(N2) c(S,C3)
+    </Grammar>
+
+    <Parameters>
+    
+        <N1 type="node">
+            <Size rand_mode="consistent" xMu="0.5" xSigma="0.1" yMu="0.1" ySigma="0.01" zMu="0.5" zSigma="0.1"/>
+            <Constrain value = "0"/>
+        </N1>
+        
+        <N2 type="node">
+            <Size rand_mode="consistent" xMu="0.5" xSigma="0.1" yMu="0.5" ySigma="0.1" zMu="0.5" zSigma="0.1"/>
+            <Constrain value = "0"/>
+        </N2>   
+
+             
+        <C1 type="connector">
+            <Location rand_mode="none" type="top"/>
+            <Size     rand_mode="single" xMu="0.5" xSigma="0.1" yMu="0.1" ySigma="0.01"/>
+            <Offset   rand_mode="consistent" xMu="0.0" xSigma="0.1" yMu="0.8" ySigma="0.1"/>            
+            <Position rand_mode="none" x="center" y="back"/>
+        </C1>  
+        
+        <C2 type="connector">
+            <Location rand_mode="none" type="top"/>
+            <Size     rand_mode="consistent" xMu="0.5" xSigma="0.1" yMu="0.1" ySigma="0.01"/>
+            <Offset   rand_mode="consistent" xMu="0.0" xSigma="0.1" yMu="0.8" ySigma="0.1"/>            
+            <Position rand_mode="none" x="center" y="center"/>
+        </C2>          
+        
+        <C3 type="connector">
+            <Location rand_mode="none" type="top"/>
+            <Size     rand_mode="single" xMu="0.5" xSigma="0.1" yMu="0.1" ySigma="0.01"/>
+            <Offset   rand_mode="consistent" xMu="0.0" xSigma="0.1" yMu="0.8" ySigma="0.1"/>            
+            <Position rand_mode="none" x="center" y="front"/>
+        </C3>                  
+
+        
+    </Parameters>  
+    
+</Shape>
+ 

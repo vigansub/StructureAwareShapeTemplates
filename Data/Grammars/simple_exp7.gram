@@ -1,0 +1,85 @@
+<!DOCTYPE Shape>
+<Shape>
+    <Grammar>
+        R - SB        
+        B - ADO
+        D - [PPPP](G3)
+        O - [NN] (G4)
+        S - n(N1)
+        A - n(N2) c(S,C1)
+        P - n(N3) c(S,C2)
+        N - n(N5) c(A,C4)
+    </Grammar>
+
+    <Parameters>
+    
+        <N1 type="node">
+            <Size rand_mode="single" xfrom="0.1" xto="0.5" yfrom="0.01" yto="0.1" zfrom="0.1" zto="0.5"/>
+            <Translation rand_mode="single" xfrom="-0.2" xto="0.2" yfrom="-0.2" yto="0.2" zfrom="-0.2" zto="0.2"/>
+            <Constrain value = "0"/>
+        </N1>
+        
+        <N2 type="node">
+            <Size rand_mode="single" xfrom="0.5" xto="5.5" yfrom="0.5" yto="0.5" zfrom="0.5" zto="0.5"/>
+            <Constrain value = "0"/>
+        </N2>  
+
+		<N3 type="node">
+            <Size rand_mode="none" xfrom="0.5" xto="5.5" yfrom="0.1" yto="0.5" zfrom="0.5" zto="0.5"/>
+            <Constrain value = "0"/>
+        </N3>  
+        
+        <N4 type="node">
+            <Size rand_mode="none" xfrom="0.01" xto="0.5" yfrom="0.01" yto="0.5" zfrom="0.01" zto="2.5"/>
+            <Constrain value = "0"/>
+        </N4> 
+        
+        <N5 type="node">
+            <Size rand_mode="none" xfrom="0.01" xto="0.5" yfrom="0.01" yto="0.5" zfrom="0.01" zto="0.5"/>
+            <Constrain value = "0"/>
+        </N5> 
+             
+        <C1 type="connector">
+            <Location rand_mode="none" type="top"/>
+            <Size     rand_mode="single" xfrom="0.0" xto="0.5" yfrom="0.0" yto="0.1"/>
+            <Position rand_mode="none" x="center" y="back"/>
+        </C1>  
+        
+        <C2 type="connector">
+            <Location rand_mode="none" type="bottom"/>
+            <Size     rand_mode="none" xfrom="0.01" xto="0.1" yfrom="0.01" yto="0.1"/>
+            <Position rand_mode="single" x="none" y="none"/>
+        </C2>
+
+        <C3 type="connector">
+            <Location rand_mode="none" type="top"/>
+            <Size     rand_mode="none" xfrom="0.01" xto="0.05" yfrom="0.01" yto="0.02"/>
+            <Position rand_mode="single" x="none" y="none"/>
+        </C3>        
+        
+        <C4 type="connector">
+            <Location rand_mode="none" type="front"/>
+            <Size     rand_mode="none" xfrom="0.01" xto="0.1" yfrom="0.01" yto="0.1"/>
+            <Position rand_mode="single" x="none" y="none"/>
+        </C4>  
+        
+        <G2 type="group">
+            <Position1 rand_mode="none" x="left" y="center"/>
+            <Position2 rand_mode="none" x="right" y="center"/>
+        </G2>
+        
+        <G3 type="group">
+            <Position1 rand_mode="none" x="left" y="front"/>
+            <Position2 rand_mode="none" x="right" y="front"/>
+            <Position3 rand_mode="none" x="left" y="back"/>
+            <Position4 rand_mode="none" x="right" y="back"/>			
+        </G3>  		
+        
+        <G4 type="group">
+            <Position1 rand_mode="none" x="left" y="center"/>
+            <Position2 rand_mode="none" x="right" y="center"/>
+        </G4>
+    </Parameters>  
+    
+</Shape>
+ 

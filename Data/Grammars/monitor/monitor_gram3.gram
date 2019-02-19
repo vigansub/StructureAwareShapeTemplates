@@ -1,0 +1,16 @@
+<!DOCTYPE Shape>
+<Shape>
+    <Grammar>
+        R - n(N1)
+     </Grammar>
+
+    <Parameters>
+        <N1 type="node">
+            <Size rand_mode="single" xfrom="0.1" xto="0.5" yfrom="0.01" yto="0.1" zfrom="0.1" zto="0.5"/>
+            <Translation rand_mode="single" xfrom="-0.2" xto="0.2" yfrom="-0.2" yto="0.2" zfrom="-0.2" zto="0.2"/>
+            <Constrain value = "0"/>
+        </N1>
+    </Parameters>  
+    
+</Shape>
+ 
